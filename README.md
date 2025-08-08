@@ -31,6 +31,7 @@
   2. "npm install"
   3. "npm run dev"
 
+- Open the Browser page following the localhost page generated in the Terminal. It will show the project app.
 - Enter the Rows and Columns number in the respected input fields.
 - Click on the "Generate" button.
 - Click on the "Add Matrix" button. It will generate the new Resultant matrix after addition of the sum matrix and multiplication matrix.
