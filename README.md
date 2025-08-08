@@ -8,10 +8,14 @@
 
 - The "Add matrix" button generates a new matrix which represents the Addition of the above two matrices.
 
+### Screenshot
+
+![](./Screenshot.png)
+
 ## Links
 
 - Github URL: [https://github.com/webdevsuman/matrix-calculator-webdevsuman](https://github.com/webdevsuman/matrix-calculator-webdevsuman)
-- Live Site URL: [https://github.com/webdevsuman/matrix-calculator-webdevsuman](https://github.com/webdevsuman/matrix-calculator-webdevsuman)
+- Live Site URL: [https://matrix-calculator-webdevsuman.vercel.app/](https://matrix-calculator-webdevsuman.vercel.app/)
 
 ### INSTALLATION GUIDE
 
