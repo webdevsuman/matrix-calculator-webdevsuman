@@ -14,6 +14,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 const GeneratedMatrixPage = () => {
+  //Number of rows and columns are accessed through useParams
   const { rows, cols } = useParams();
   //   console.log("Rows:", rows);
   //   console.log("Cols:", cols);
@@ -49,6 +50,7 @@ const GeneratedMatrixPage = () => {
     onGenerate();
   }, [rows, cols]);
 
+  //This single function Generates the Matrix and it is re-used in every generation of Matrix Table
   const renderTable = (data, title) => (
     <TableContainer component={Paper} className="mb-4">
       <Box className="p-4">
@@ -83,7 +85,7 @@ const GeneratedMatrixPage = () => {
     </TableContainer>
   );
 
-  //   FOR ADDITION OF THE SUM-MATRIX AND MULTIPLICATION-MATRIX
+  //FOR ADDITION OF THE SUM-MATRIX AND MULTIPLICATION-MATRIX
   const [resultMatrix, setResultMatrix] = useState([]);
 
   const handleMatrixAddition = () => {
@@ -97,7 +99,20 @@ const GeneratedMatrixPage = () => {
     setResultMatrix(addedMatrix);
   };
 
-  return (
+  return rows == "0" || cols == "0" ? (
+    ///If the User enters 0 Rows OR 0 Columns then Show this.
+    <div className="my-10 flex flex-col items-center gap-5">
+      <Typography variant="h4">Matrix not be generated</Typography>
+      <Typography variant="body1">
+        Please enter valid number of rows or columns.
+      </Typography>
+      <Link to="/">
+        {/*Go back to Homepage */}
+        <Button variant="outlined">Go Back</Button>
+      </Link>
+    </div>
+  ) : (
+    ///If User put valid inputs, Show this.
     <div className="p-10 flex flex-col items-center uppercase gap-10 text-center">
       <Typography variant="h3" color="#6FE6FC">
         Generated Matrices
@@ -132,6 +147,8 @@ const GeneratedMatrixPage = () => {
             </div>
           </Paper>
         ))}
+
+        {/* This is for the Addition of the Summation matrix and the Multiplication matrix */}
         <div className="flex flex-col gap-5 items-center">
           <Typography variant="body2" color="secondary">
             Addition of the above two matrices
@@ -144,6 +161,7 @@ const GeneratedMatrixPage = () => {
             Add matrix
           </Button>
         </div>
+        {/* Showing the Resultant Matrix after Final Addition */}
         {resultMatrix.length > 0 && (
           <Paper elevation={5} className="p-5">
             {renderTable(resultMatrix, "Resultant Matrix")}
@@ -151,6 +169,7 @@ const GeneratedMatrixPage = () => {
         )}
       </div>
       <Link to="/">
+        {/*Go back to Homepage */}
         <Button variant="outlined" size="large">
           BACK
         </Button>

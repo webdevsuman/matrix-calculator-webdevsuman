@@ -10,7 +10,7 @@
 
 ### Screenshot
 
-![](Screenshot.png)
+![](./public/Screenshot.png)
 
 ## Links
 
@@ -20,8 +20,27 @@
 ### INSTALLATION GUIDE
 
 - Install Node on your computer
+
+- Install Git bash
+
 - Open Terminal in your project folder or in VS Code terminal in the project folder
-- Enter these commands:
+
+- Run these commands with Git bash:
+
   1. "git clone https://github.com/webdevsuman/matrix-calculator-webdevsuman.git"
   2. "npm install"
   3. "npm run dev"
+
+- Enter the Rows and Columns number in the respected input fields.
+- Click on the "Generate" button.
+- Click on the "Add Matrix" button. It will generate the new Resultant matrix after addition of the sum matrix and multiplication matrix.
+- Click on the "Back" button to go to the Homepage.
+- Below Footer there is "Source Code" link which will take the user to the Github repository page.
+
+## Technologies used
+
+- React Vite
+- React Hook Form
+- TailwindCSS
+- Material UI
+- MUI Icons
